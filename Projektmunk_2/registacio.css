@@ -1,0 +1,177 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: rgb(210, 208, 208);
+  padding: 20px 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+input {
+  width: 100%;
+  padding: 8px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #5cb85c;
+  box-shadow: 0 0 5px rgba(92, 184, 92, 0.4);
+  outline: none;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #5cb85c;
+  border: none;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #4cae4c;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#message {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.error {
+  color: red;
+  font-size: 0.9em;
+}
+
+.password-hint {
+  font-size: 0.85em;
+  color: #666;
+  margin-top: 5px;
+  display: none;
+}
+
+.password-strength {
+  margin-top: 5px;
+}
+
+.password-strength div {
+  height: 5px;
+  border-radius: 4px;
+}
+
+.weak {
+  width: 33%;
+  background-color: red;
+}
+
+.medium {
+  width: 66%;
+  background-color: orange;
+}
+
+.strong {
+  width: 100%;
+  background-color: green;
+}
+
+.phonenum {
+  display: flex;
+  flex-direction: column;
+}
+
+.phonenum div {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.phonenum select {
+  height: 34px;
+  padding: 2px 5px;
+  border-radius: 6px;
+  border: 1px solid #888;
+  background-color: white;
+  font-size: 13px;
+  cursor: pointer;
+  width: 75px;
+  text-align: center;
+  transition: 0.2s ease;
+}
+
+#phone {
+  flex: 1;
+  height: 34px;
+  padding: 4px 8px;
+  border: 1px solid #888;
+  border-radius: 6px;
+  outline: none;
+  font-size: 13px;
+  transition: all 0.2s ease;
+}
+
+#countryCode,
+#phone {
+  box-sizing: border-box;
+}
+
+#countryCode:focus,
+#phone:focus {
+  border-color: #5cb85c;
+  outline: none;
+  box-shadow: 0 0 4px rgba(92, 184, 92, 0.4);
+}
+
+#phoneHint {
+  color: gray;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+.phonenum div:focus-within {
+  background-color: #eefae9;
+  border-radius: 8px;
+  transition: 0.3s ease;
+}
+
+img {
+  position: absolute;
+  width: 60px;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}

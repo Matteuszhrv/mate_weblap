@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="hu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jelszó visszaállítása</title>
+  <link rel="stylesheet" href="jelszo.css">
+</head>
+<body>
+  <main class="card" aria-labelledby="title">
+    <h1 id="title">Jelszó visszaállítása</h1>
+    <p class="lead">Add meg az e-mail címed — küldünk egy megerősítő kódot a jelszó visszaállításához.</p>
+
+    <section id="step-request">
+      <form id="request-form">
+        <label for="email">E-mail cím</label>
+        <input id="email" name="email" type="email" required autocomplete="email" placeholder="pelda@valami.hu" />
+        <div class="row" style="margin-top:12px">
+          <button class="btn" type="submit">Kód küldése</button>
+        </div>
+        <p id="request-msg" class="helper" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <section id="step-reset" class="hidden" aria-hidden="true">
+      <form id="reset-form">
+        <label for="code">Megerősítő kód</label>
+        <input id="code" name="code" type="text" inputmode="numeric" pattern="[0-9]*" placeholder="123456" required />
+
+        <label for="pw">Új jelszó</label>
+        <div style="position:relative">
+          <input id="pw" name="pw" type="password" required minlength="8" placeholder="Legalább 8 karakter" aria-describedby="pw-help" />
+          <button type="button" id="toggle-pw" class="linklike" style="position:absolute;right:8px;top:8px">Mutat</button>
+        </div>
+        <div class="meter" aria-hidden="true"><i id="strength-bar"></i></div>
+        <div id="pw-help" class="helper">Javasolt: legalább 8 karakter, szám és nagybetű.</div>
+
+        <label for="pw2">Jelszó ismét</label>
+        <input id="pw2" name="pw2" type="password" required placeholder="Új jelszó újra" />
+
+        <div class="row" style="margin-top:12px">
+          <button class="btn" type="submit">Jelszó visszaállítása</button>
+          <button class="btn secondary" type="button" id="back-request">Vissza</button>
+        </div>
+        <p id="reset-msg" class="helper" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <footer>Ha nem kaptad meg az e-mailt, ellenőrizd a spam mappát vagy próbáld újra később.</footer>
+  </main>
+
+  <script src="jelszo.js">
+    
+  </script>
+</body>
+</html>
